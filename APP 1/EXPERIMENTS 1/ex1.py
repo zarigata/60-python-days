@@ -8,7 +8,8 @@ while True:
             todos.append(todo)
 
         case 'show':
-            print (todos)
+            for item in todos:
+                print(item)
         case 'exit':
             break
 print("BYE BYE")
