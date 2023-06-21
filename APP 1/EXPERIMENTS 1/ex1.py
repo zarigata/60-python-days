@@ -13,9 +13,10 @@ while True:
             for item in todos:
                 item = item.title()
                 print(item)
-
+        #EDITOR OF TASKS
         case 'edit':
-            print ("10-4")
+            number = input("Number of thetodo to edit")
+            existing_todos = todos[number]
         #LEAVE
         case 'exit' | 'leave' | 'quit' | 'close':
             break
