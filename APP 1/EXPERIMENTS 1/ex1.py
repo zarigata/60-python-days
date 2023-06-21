@@ -15,8 +15,10 @@ while True:
                 print(item)
         #EDITOR OF TASKS
         case 'edit':
-            number = input("Number of thetodo to edit")
-            existing_todos = todos[number]
+            number = int(input("Number of the todo to edit"))
+            number = number - 1
+            new_todos =input("Imput the new todo")
+            todos[number] = new_todos
         #LEAVE
         case 'exit' | 'leave' | 'quit' | 'close':
             break
