@@ -1,4 +1,4 @@
-todos = []
+
 
 while True:
     user_action = input("type add, show, edit, complete or exit:")
@@ -7,11 +7,19 @@ while True:
         #ADD
         case 'add':
             todo =input("TODO:   ") + "\n"
+            file = open('todo.txt' , 'r')
+            todos = file.readlines()
+            file.close()
             todos.append(todo)
+
             file = open('todo.txt', 'w')
             file.writelines(todos)
+            file.close()
         #SHOW
         case 'show' | 'display':
+            file = open('todo.txt' , 'r')
+            todos =file.readlines()
+            file.close()
             for index, item in enumerate(todos):
                 index = index + 1
                 item = item.title()
