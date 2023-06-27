@@ -6,14 +6,16 @@ while True:
     match user_action:
         #ADD
         case 'add':
-            todo =input("TODO:   ")
+            todo =input("TODO:   ") + "\n"
             todos.append(todo)
+            file = open('todo.txt', 'w')
+            file.writelines(todos)
         #SHOW
         case 'show' | 'display':
             for index, item in enumerate(todos):
                 index = index + 1
                 item = item.title()
-                print(index,'--', item)
+                print (f"{index}--{item}")
         #EDITOR OF TASKS
         case 'edit':
             number = int(input("Number of the todo to edit"))
