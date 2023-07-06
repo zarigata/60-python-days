@@ -20,7 +20,8 @@ while True:
             file = open('Files/todo.txt', 'r')
             todos =file.readlines()
             file.close()
-            for index, item in enumerate(todos):
+            new_todos = [item.strip('\n') for item in todos]
+            for index, item in enumerate(new_todos):
                 index = index + 1
                 item = item.title()
                 print (f"{index}--{item}")
